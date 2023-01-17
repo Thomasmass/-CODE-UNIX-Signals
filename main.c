@@ -25,6 +25,7 @@ void display_pid(void) {
 void player_one(void) {
     display_pid();
     printf("waiting for enemy connection...\n");
+    pause();
     player.pid_j2 = get_j2_pid();
 
     kill(player.pid_j2, SIGUSR2);
